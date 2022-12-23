@@ -5,6 +5,7 @@
 import Kitura
 import LoggerAPI
 import Dispatch
+import KituraOpenAPI
 
 public class App {
     let router = Router()
@@ -17,6 +18,9 @@ public class App {
     func postInit() throws {
         initializeCodableRoutes(for: self)
         initializeRawRoutes(app: self)
+
+        // localhost:8080/openapi/ui
+        KituraOpenAPI.addEndpoints(to: router)
     }
 
     public func run() throws {
