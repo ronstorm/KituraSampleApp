@@ -4,6 +4,9 @@
 
 import Application
 import LoggerAPI
+import HeliumLogger
+
+HeliumLogger.use()
 
 do {
     let app = try App()
