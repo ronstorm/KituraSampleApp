@@ -3,11 +3,13 @@
 //
 
 import Kitura
+import LoggerAPI
 
 public class App {
     let router = Router()
 
     public init() throws {
+        Log.info("Kitura Sample App")
     }
 
     func postInit() throws {
